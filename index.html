@@ -13,26 +13,25 @@
     <script>
         // getElement로 dom 선택, console로 찍기
         // . 은 왼쪽 안에있는 함수(오른쪽)를 쓰겠다는 뜻
-        //
         console.log(document.getElementById("number"));
         console.log(document.getElementById("increase"));
         console.log(document.getElementById("decrease"));
-
+        // 초기 카운터값 선언, 초기화
         var counterVal = 0;
 
+        // 증가버튼 함수
         function incrementClick() {
             updateDisplay(++counterVal);
         }
-
+        // 감소버튼 함수
         function decrementClick() {
             updateDisplay(--counterVal);
         }
-
+        // 버튼 클릭에 따른 화면 업데이트
         function updateDisplay(val) {
             document.getElementById('number').innerHTML = val;
         }
     </script>
-    
-
 </body>
+
 </html>
