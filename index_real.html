@@ -4,16 +4,63 @@
     <title>Document</title>
     <style>
       .backGround {
-        background-color: aquamarine;
+        background-color: rgb(170, 231, 247);
+        position: absolute;
+        /* z인덱스 = 위로 올라가는 우선순위 */
+        z-index: 1;
+        left: 0;
+        top: 0;
         width: 100%;
         height: 100%;
+      }
+
+      .content {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+        height: 700px;
+        width: 600px;
+        /* 흰 박스 중앙정렬 */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #header {
+        /* 회원가입 중앙정렬 */
+        text-align: center;
+        margin-top: 80px;
+      }
+
+      #hr {
+        margin: 30px 200px 30px 200px;
+      }
+
+      input {
+        background-color: transparent;
+        border-radius: 5px;
+        border-color: white;
+        border-style: solid;
       }
     </style>
   </head>
   <body>
     <div class="backGround">
       <div class="content">
-        <h2>회원가입</h2>
+        <div id="header">
+          <h1>회원가입</h1>
+          <hr id="hr" />
+        </div>
+
+        <form>
+          <input type="text" name="name" /><br />
+          <input type="text" name="Email" /><br />
+          <input type="text" name="age" /><br />
+          <input type="password" name="password" /><br />
+          <input type="password" name="passwordVerify" /><br />
+        </form>
+
+        <div>가입하기</div>
       </div>
     </div>
   </body>
